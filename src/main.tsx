@@ -8,6 +8,8 @@ import Login from './pages/login/Login.tsx'
 import SignUp from './pages/signup/Signup.tsx'
 import { Provider } from 'react-redux'
 import { store } from './store.ts'
+import axios from 'axios'
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
 const router = createBrowserRouter([
   {
