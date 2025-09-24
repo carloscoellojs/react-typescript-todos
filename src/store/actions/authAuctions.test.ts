@@ -2,7 +2,6 @@ import axios from 'axios';
 import {
   loginUser,
   registerUser,
-  logoutUser,
   revertMessageDetailsStateAsync
 } from './authAuctions';
 import {
@@ -10,7 +9,6 @@ import {
   loginError,
   createUser,
   createUserError,
-  logout,
   revertMessageDetailsState
 } from '../reducers/authReducer';
 
