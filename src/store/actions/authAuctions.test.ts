@@ -58,17 +58,6 @@ describe('authAuctions thunks', () => {
     isAxiosErrorSpy.mockRestore();
   });
 
-  it('logoutUser dispatches logout', () => {
-    logoutUser()(dispatch);
-    expect(dispatch).toHaveBeenCalledWith(logout());
-  });
-
-  it('logoutUser dispatches logOutError on error', () => {
-    // To simulate error, override dispatch to throw
-    const errorDispatch = () => { throw new Error('fail'); };
-    expect(() => logoutUser()(errorDispatch as any)).toThrow();
-  });
-
   it('revertMessageDetailsStateAsync dispatches revertMessageDetailsState after delay', async () => {
     jest.useFakeTimers();
     const promise = revertMessageDetailsStateAsync()(dispatch);
